@@ -10,8 +10,9 @@
 
 #nav {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -20,14 +21,17 @@
   margin: auto;
 }
 #nav .nav-link {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+  color: rgba(71, 32, 4, 0.815) !important;
 }
 #nav .nav-link::before {
   content: "";
   display: block;
   width: 0;
   height: 1.6px;
-  background: black;
+  background: rgba(71, 32, 4, 0.815);
   opacity: 0.7;
   transition: width 0.3s;
 }
@@ -36,40 +40,94 @@
 }
 #nav .navbar-brand {
   margin-left: 1.2rem;
+  font-family: Marck Script;
+  font-weight: 200;
+  font-size: 1.6rem;
+  opacity: 0.9;
+  color: rgba(71, 32, 4, 0.9) !important;
+  position: relative;
+  z-index: 10;
+}
+#nav ul {
+  transition: 500ms ease-in;
 }
 #nav ul li {
   margin-right: 1rem;
   padding-top: 0.5rem;
 }
 #nav .buttons {
-  position: relative;
+  display: none;
+  position: absolute;
+  right: 0;
   margin: 0 1rem 0 1rem;
   cursor: pointer;
 }
 #nav .buttons .icon {
   display: block;
-  width: 33px;
+  width: 30px;
   height: 2px;
-  background: black;
-  color: black;
+  background: rgba(71, 32, 4, 0.815);
   margin-bottom: 0.4rem;
-  transition: 100ms ease-in;
+  transition: 200ms ease-in;
+}
+#nav .but .fa {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  color: rgba(71, 32, 4, 0.815) !important;
 }
 
 .rotate-left {
   position: absolute;
   transform: rotateZ(220deg);
-  top: 40%;
-  left: 0;
+  top: 50%;
+  right: 0;
 }
 
 .rotate-right {
   position: absolute;
   transform: rotateZ(-220deg);
-  top: 40%;
-  left: 0;
+  top: 50%;
+  right: 0;
 }
 
 .disappear {
   opacity: 0;
+}
+
+@media (max-width: 801px) {
+  #nav ul {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #817369;
+    position: fixed;
+    top: 8%;
+    text-align: center;
+    -webkit-clip-path: circle(0.3% at 100% 0);
+            clip-path: circle(0.3% at 100% 0);
+  }
+  #nav ul li {
+    margin: 1.1rem 0rem 1.1rem 0rem;
+  }
+  #nav ul li .nav-link {
+    color: white !important;
+  }
+  #nav ul li .nav-link::before {
+    background: white !important;
+  }
+  #nav .buttons {
+    display: block;
+  }
+
+  .data {
+    margin: auto;
+  }
+
+  .show {
+    -webkit-clip-path: circle(139.5% at 0 97%) !important;
+            clip-path: circle(139.5% at 0 97%) !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
