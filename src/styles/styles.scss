@@ -101,19 +101,18 @@
 @media (max-width:801px) {
     #nav{
         ul{
-            width: 100%;
-            height: 100vh;
+            width: 100vw;
+            height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background: rgb(129, 115, 105);
             position: fixed;
-            top: 8%;
-            text-align: center;
+            top: 10vh;
             clip-path: circle(0.3% at 100% 0);
+            text-align: center !important;
             li{
-                margin:1.1rem 0rem 1.1rem 0rem;
                 .nav-link{
                     color: white !important;
                 }
