@@ -6,6 +6,7 @@
   list-style: none;
   text-decoration: none;
   color: black !important;
+  transition: 100ms ease-out;
 }
 
 ::-webkit-scrollbar {
