@@ -8,6 +8,10 @@
   color: black !important;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #nav {
   position: fixed;
   top: 0%;
@@ -24,14 +28,14 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   opacity: 0.8;
-  color: rgba(71, 32, 4, 0.815) !important;
+  color: beige !important;
 }
 #nav .nav-link::before {
   content: "";
   display: block;
   width: 0;
   height: 1.6px;
-  background: rgba(71, 32, 4, 0.815);
+  background: bisque;
   opacity: 0.7;
   transition: width 0.3s;
 }
@@ -44,7 +48,7 @@
   font-weight: 200;
   font-size: 1.6rem;
   opacity: 0.9;
-  color: rgba(71, 32, 4, 0.9) !important;
+  color: bisque !important;
   position: relative;
   z-index: 10;
 }
@@ -66,14 +70,14 @@
   display: block;
   width: 30px;
   height: 2px;
-  background: rgba(71, 32, 4, 0.815);
+  background: bisque;
   margin-bottom: 0.4rem;
   transition: 200ms ease-in;
 }
 #nav .but .fa {
   font-size: 1.1rem;
   opacity: 0.8;
-  color: rgba(71, 32, 4, 0.815) !important;
+  color: bisque !important;
 }
 
 .rotate-left {
@@ -94,23 +98,73 @@
   opacity: 0;
 }
 
+.header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  height: 10%;
+  width: 0.125rem;
+  background: bisque;
+}
+
+.he {
+  text-orientation: upright !important;
+  -ms-writing-mode: tb-rl !important;
+      writing-mode: vertical-rl !important;
+  font-size: 1rem;
+  color: bisque !important;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  height: 10%;
+  width: 0.125rem;
+  background: bisque;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.icon-wrapper {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-bottom: 3rem;
+  cursor: pointer;
+}
+.icon-wrapper .fa {
+  color: bisque !important;
+}
+
 @media (max-width: 801px) {
   #nav ul {
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #817369;
+    background: black;
     position: fixed;
-    top: 8%;
-    text-align: center;
+    top: 10vh;
     -webkit-clip-path: circle(0.3% at 100% 0);
             clip-path: circle(0.3% at 100% 0);
-  }
-  #nav ul li {
-    margin: 1.1rem 0rem 1.1rem 0rem;
+    text-align: center !important;
   }
   #nav ul li .nav-link {
     color: white !important;

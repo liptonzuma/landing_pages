@@ -7,6 +7,9 @@
     text-decoration: none;
     color: black !important;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 
 #nav{
     position: fixed;
@@ -24,14 +27,14 @@
         font-size: 0.8rem;
         text-transform: uppercase;
         opacity: 0.8;
-        color: rgba(71, 32, 4, 0.815) !important;
+        color: beige !important;
     }
     .nav-link::before{
         content: '';
         display: block;
         width: 0;
         height: 1.6px;
-        background:rgba(71, 32, 4, 0.815);
+        background:bisque;
         opacity: 0.7;
         transition: width .3s;
     }
@@ -44,7 +47,7 @@
         font-weight: 200;
         font-size: 1.6rem;
         opacity: 0.9;
-        color: rgba(71, 32, 4, 0.9) !important;
+        color: bisque !important;
         position: relative;
         z-index: 10;
     }
@@ -67,7 +70,7 @@
             display: block;
             width:30px;
             height:2px;
-            background:rgba(71, 32, 4, 0.815);
+            background:bisque;
             margin-bottom: 0.4rem;
             transition: 200ms ease-in;
         }
@@ -77,7 +80,7 @@
         .fa{
             font-size:1.1rem;
             opacity: 0.8;
-            color: rgba(71, 32, 4, 0.815) !important;
+            color:bisque !important;
         }
     }
 
@@ -97,6 +100,56 @@
 .disappear{
     opacity: 0;
 }
+.header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top:20%;
+    left:10%;
+    height: 10%;
+    width:0.125rem;
+    background: bisque;
+}
+.he{
+    text-orientation: upright !important;
+    writing-mode: vertical-rl !important;
+    font-size: 1rem;
+    color: bisque !important;
+    
+}
+
+.header::after{
+    content: '';
+    position: absolute;
+    bottom:20%;
+    left:10%;
+    height: 10%;
+    width:0.125rem;
+    background:bisque;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.icon-wrapper{
+    width:2rem;
+    height: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-bottom: 3rem;
+    cursor: pointer;
+    .fa{
+        color: bisque !important;
+    }
+}
 
 @media (max-width:801px) {
     #nav{
@@ -107,7 +160,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: rgb(129, 115, 105);
+            background: black;
             position: fixed;
             top: 10vh;
             clip-path: circle(0.3% at 100% 0);
