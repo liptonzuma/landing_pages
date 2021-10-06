@@ -28,14 +28,14 @@
         font-size: 0.8rem;
         text-transform: uppercase;
         opacity: 0.8;
-        color: beige !important;
+        color: black !important;
     }
     .nav-link::before{
         content: '';
         display: block;
         width: 0;
         height: 1.6px;
-        background:bisque;
+        background:black;
         opacity: 0.7;
         transition: width .3s;
     }
@@ -48,7 +48,7 @@
         font-weight: 200;
         font-size: 1.6rem;
         opacity: 0.9;
-        color: bisque !important;
+        color: black !important;
         position: relative;
         z-index: 10;
     }
@@ -71,7 +71,7 @@
             display: block;
             width:30px;
             height:2px;
-            background:bisque;
+            background:black;
             margin-bottom: 0.4rem;
             transition: 200ms ease-in;
         }
@@ -81,7 +81,7 @@
         .fa{
             font-size:1.1rem;
             opacity: 0.8;
-            color:bisque !important;
+            color:black !important;
         }
     }
 
@@ -100,40 +100,6 @@
 }
 .disappear{
     opacity: 0;
-}
-.header{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-
-}
-.header::before{
-    content: '';
-    position: absolute;
-    top:20%;
-    left:10%;
-    height: 10%;
-    width:0.125rem;
-    background: bisque;
-}
-.he{
-    text-orientation: upright !important;
-    writing-mode: vertical-rl !important;
-    font-size: 1rem;
-    color: bisque !important;
-    
-}
-
-.header::after{
-    content: '';
-    position: absolute;
-    bottom:20%;
-    left:10%;
-    height: 10%;
-    width:0.125rem;
-    background:bisque;
 }
 .icons{
     display: flex;
